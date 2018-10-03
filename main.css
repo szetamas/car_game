@@ -1,0 +1,39 @@
+body
+{
+	font-family: 'Press Start 2P', cursive;
+	font-size: 1.5rem;
+	background-color:#3399ff;
+}
+a, a:visited, a:active, a:hover
+{
+	color: black;
+}
+#bg
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	border: 1px solid black;
+}
+#car
+{
+	position: absolute;
+	left: 100px;
+	top: 500px;
+}
+.anothercar
+{
+	position: absolute;
+	left: 100px;
+	top: -282px;
+}
+#out
+{
+	position: absolute;
+	left: 0px;
+	top: 800px;
+	height: 300px;
+    width: 650px;
+    background-color:#3399ff;
+    color: black;
+}
