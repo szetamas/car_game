@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&amp;subset=latin-ext" rel="stylesheet">
 	<script src="jquery-3.3.1.min.js"></script>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="main.css">
 	<title>Game</title>
 	<script src="main.js"></script>
@@ -14,13 +13,39 @@
 	<img id="bg" src="way.png" height="800" width="650">
 	<img id="ancar0" class="anothercar" src="anothercar.png" height="282" width="140">
 	<img id="car" src="car.png" height="282" width="140">
-	<div id="out">
+	<div id="divbottom">
 		<noscript>A javascript ki van kapcsolva, így előfordúlhat, hogy az oldal nem megfelelően működik.</noscript>
-		<h1>Press left and right keys to drive to left and right the car.</h1>
+		<h2 id="out">Press left and right keys to drive to left and right the car.</h2>
 		<h1><a name="bak" href="/../game.html">Back</a></h1>
 		<h1><a name="home" href="/../index.html">Homepage</a></h1> 
 	</div>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<div id="divcentrum">
+		<h1 id="out2">Choose one!</h1>
+		<table id="menu">
+		<tr>
+			<th></th>
+			<th>Trad itional</th>
+			<th>Real</th> 
+		</tr>
+		<tr>
+			<th rowspan="2">Slow</th>
+			<td onClick="start('traditional','1500');">little cars</td>
+			<td onClick="start('real','1500');">little cars</td>
+		</tr>
+		<tr>
+			<td>much cars (soon)</td>
+			<td>much cars (soon)</td>
+		</tr>
+		<tr>
+			<th rowspan="2">Normal</th>
+			<td onClick="start('traditional','1000');">little cars</td>
+			<td onClick="start('real','1000');">little cars</td>
+		</tr>
+		<tr>
+			<td>much cars (soon)</td>
+			<td>much cars (soon)</td>
+		</tr>
+		</table>
+	</div>
 </body>
 </html>
