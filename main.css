@@ -8,6 +8,10 @@ a, a:visited, a:active, a:hover
 {
 	color: black;
 }
+img
+{
+	filter: grayscale(100%);
+}
 #bg
 {
 	position: absolute;
@@ -27,7 +31,7 @@ a, a:visited, a:active, a:hover
 	left: 100px;
 	top: -282px;
 }
-#out
+#divbottom
 {
 	position: absolute;
 	left: 0px;
@@ -36,4 +40,23 @@ a, a:visited, a:active, a:hover
     width: 650px;
     background-color:#3399ff;
     color: black;
+}
+#divcentrum
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 800px;
+    width: 650px;
+    color: white;
+    text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+}
+#out2
+{
+	text-align:center;
+}
+#menu
+{
+	height: 500px;
+    width: 650px;
 }
