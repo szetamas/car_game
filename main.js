@@ -6,6 +6,7 @@ function rando(a)
 
 ///this is object constructor with id
 ///and sav that is mean the object location(path) in the road
+
 ///and some method hitCheck: check that this obj "hitting" the target
 ///goDown: an object go to down some speed and that change path(maybe)
 ///spawn: take an object into a path and coords
@@ -62,6 +63,7 @@ function objektum(id, sav){
 		//i need a random path
 		var whichSav=rando(3)+1;
 		
+
 		//need a rando 50%(changing the path), but i dont need this with traditional mode
 		var valte=rando(2);
 		
@@ -71,7 +73,6 @@ function objektum(id, sav){
 			case 1:
 				//go to the begin of first path
 				this.spawn(1,100,fromY);
-			
 				if(valtas)
 				{
 					//if changer variable more than 0 (so he get value), start a path canging later(valtas time)
@@ -81,6 +82,7 @@ function objektum(id, sav){
 						//go to down a little and later change the path and go to the bottom 
 						$("#"+this.id).animate({top: parseInt(((toY/10)*3)-282)+"px"}, parseInt((tempo/10)*3), "linear");
 						$("#"+this.id).animate({top: parseInt(((toY/10)*6)-282)+"px",left: "250px"}, parseInt((tempo/10)*3), "linear");
+
 						$("#"+this.id).animate({top: toY+"px"},
 						{
 							duration: parseInt((tempo/10)*6),
@@ -104,7 +106,7 @@ function objektum(id, sav){
 					if(valte>0)
 					{
 						$("#"+this.id).animate({top: parseInt(((toY/10)*3)-282)+"px"}, parseInt((tempo/10)*3), "linear");
-					
+            
 						//i need 50-50 random num that chose the side
 						if(rando(2)>0)
 						{
@@ -118,6 +120,7 @@ function objektum(id, sav){
 							$("#"+this.id).animate({top: parseInt(((toY/10)*6)-282)+"px",left: "400px"}, parseInt((tempo/10)*3), "linear");
 							this.sav=3;
 						}
+
 						$("#"+this.id).animate({top: toY+"px"},
 						{
 							duration: parseInt((tempo/10)*6),
@@ -128,12 +131,13 @@ function objektum(id, sav){
 							}
 						});
 						
+
 					}
 				}
 				break;
 			case 3:	
 				this.spawn(3,400,fromY);
-			
+
 				if(valtas)
 				{
 					if(valte>0)
@@ -141,6 +145,7 @@ function objektum(id, sav){
 						//goto left
 						$("#"+this.id).animate({top: parseInt(((toY/10)*3)-282)+"px"}, parseInt((tempo/10)*3), "linear");
 						$("#"+this.id).animate({top: parseInt(((toY/10)*6)-282)+"px",left: "250px"}, parseInt((tempo/10)*3), "linear");
+
 						$("#"+this.id).animate({top: toY+"px"},
 						{
 							duration: parseInt((tempo/10)*6),
@@ -157,6 +162,7 @@ function objektum(id, sav){
 			
 				break;
 		}
+
 
 		if(!valtas || valte==0)
 		{
@@ -215,8 +221,10 @@ function objektum(id, sav){
 ///this is starting(and initialization method) with game mode, speed and car number
 function start(mode,tempo,cars=1)
 {
+
 	//clear the points
 	point=0;
+
 	switch(mode)
 		{
 			case "traditional":
@@ -241,6 +249,7 @@ function start(mode,tempo,cars=1)
 				//start the driving(paramters:obj,fromY,toY,tempo and optional valtas)
 				ancar.goDown(ancar,-282,800,parseInt(tempo));
 				//it checks that the car hit the another car or not (need a better hitchecking technique)
+
 				hchecking=setInterval("car.hitCheck(ancar);", 30);
 				
 				break;
@@ -258,6 +267,7 @@ function start(mode,tempo,cars=1)
 				//off menu
 				$("img").css("filter", "grayscale(0)");
 				$("#divcentrum").css("visibility","hidden");
+
 				
 				//body get an onkeydown, out2 get onclick
 				$("body").attr("onkeydown","if(event.which == 13 && $('img').css('filter') == 'grayscale(1)'){start('real','"+tempo+"');}");
@@ -266,6 +276,7 @@ function start(mode,tempo,cars=1)
 				ancar.goDown(ancar,-282,800,parseInt(tempo),true);
 				hchecking=setInterval("car.hitCheck(ancar);", 30);
 				
+
 				break;
 		}	
 }
@@ -273,6 +284,7 @@ function start(mode,tempo,cars=1)
 
 $(document).ready(function()
 {	
+
 	//check that this device it is a phone(or tablet etc)
 	function itIsPhone()
 	{
@@ -306,6 +318,7 @@ $(document).ready(function()
         $(this).css("background-color", "#666666");
     });
 	
+
 	
 	//phone
 	$("body").on("touchstart", function(e)
@@ -334,15 +347,19 @@ $(document).ready(function()
 	//pc
 	$("body").on("keydown", function(e)
 	{	
+
 		
 		if( e.which == 37 && $("img").css("filter") == "grayscale(0)" )		//LEFT
+
 		{
 			//if the keydown is 37 keycode(left) and the img's doesnt have grayscale, then goto left with move method
 			car.move(-1,80);
 			
 		}
 		
+
 		if( e.which == 39 && $("img").css("filter") == "grayscale(0)" )		//RIGHT
+
 		{
 			//if the keydown is 39 keycode(right) and the img's doesnt have grayscale, then goto right with move method
 			car.move(1,80);
