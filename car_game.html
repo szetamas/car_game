@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&amp;subset=latin-ext" rel="stylesheet">
 	<script src="jquery-3.3.1.min.js"></script>
 	<link rel="stylesheet" href="main.css">
@@ -15,7 +15,7 @@
 	<img id="car" src="car.png" height="282" width="140">
 	<div id="divbottom">
 		<noscript>A javascript ki van kapcsolva, így előfordúlhat, hogy az oldal nem megfelelően működik.</noscript>
-		<h2 id="out">Press left and right keys to drive to left and right the car.</h2>
+		<h2 id="out"></h2>
 		<h1><a name="bak" href="/../game.html">Back</a></h1>
 		<h1><a name="home" href="/../index.html">Homepage</a></h1> 
 	</div>
@@ -28,22 +28,22 @@
 			<th>Real</th> 
 		</tr>
 		<tr>
-			<th rowspan="2">Slow</th>
-			<td onClick="start('traditional','1500');">little cars</td>
-			<td onClick="start('real','1500');">little cars</td>
+			<th rowspan="2">Slow (start speed)</th>
+			<td><button onClick="if($('img').css('filter') == 'grayscale(1)'){start('traditional','1600');}" class="available">little cars</button></td>
+			<td><button onClick="if($('img').css('filter') == 'grayscale(1)'){start('real','1600');}" class="available">little cars</button></td>
 		</tr>
 		<tr>
-			<td>much cars (soon)</td>
-			<td>much cars (soon)</td>
+			<td><button class="soon">much cars (soon)</td>
+			<td><button class="soon">much cars (soon)</td>
 		</tr>
 		<tr>
-			<th rowspan="2">Normal</th>
-			<td onClick="start('traditional','1000');">little cars</td>
-			<td onClick="start('real','1000');">little cars</td>
+			<th rowspan="2">Normal (start speed)</th>
+			<td><button onClick="if($('img').css('filter') == 'grayscale(1)'){start('traditional','1200');}" class="available">little cars</button></td>
+			<td><button onClick="if($('img').css('filter') == 'grayscale(1)'){start('real','1200');}" class="available">little cars</button></td>
 		</tr>
 		<tr>
-			<td>much cars (soon)</td>
-			<td>much cars (soon)</td>
+			<td><button class="soon">much cars (soon)</button></td>
+			<td><button class="soon">much cars (soon)</button></td>
 		</tr>
 		</table>
 	</div>
